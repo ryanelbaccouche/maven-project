@@ -34,7 +34,7 @@ pipeline{
                     steps{
  
                         echo 'Triggering Stage Deployment'
-                        bat 'copy {**/target/*.war} {params.tomcat_prod}'
+                        bat 'copy ${**/target/*.war} ${params.tomcat_prod}'
                     }
                     
                 }
