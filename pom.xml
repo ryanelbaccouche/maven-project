@@ -206,12 +206,18 @@
     </dependencies>
   </dependencyManagement>
 
-  <scm>
-    <connection>scm:git:git@github.com:jleetutorial/maven-project.git</connection>
-    <developerConnection>scm:git:git@github.com:jleetutorial/maven-project.git</developerConnection>
-    <tag>HEAD</tag>
-    <url>http://github.com/jleetutorial/maven-project</url>
-  </scm>
+ <distributionManagement>
+    <repository>
+      <id>nexus</id>
+      <name>Nexus Releases</name>
+      <url>http://localhost:8081/repository/maven-releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>nexus</id>
+      <name>Nexus Snapshot</name>
+      <url>http://localhost:8081/repository/maven-snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
 
   <prerequisites>
     <maven>3.0.3</maven>
